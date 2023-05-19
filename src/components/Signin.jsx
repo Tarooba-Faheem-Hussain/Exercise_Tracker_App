@@ -1,61 +1,69 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import loginImg from "../assets/login.png";
+import Logo from "../assets/logo.png";
 
 export default function Signin() {
   return (
-    <div className="bg-[url('./assets/login.png')]  h-screen bg-no-repeat w-full object-fill bg-cover ">
-      {/* <div>
-        <img className=" h-screen w-full object-fill" src={loginImg} alt="" />
-      </div> */}
+    <div class="flex h-screen w-full items-center justify-center bg-cover bg-no-repeat bg-[url('./assets/login.png')]">
+    <div className="rounded-xl bg-gray-600 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
+        <div>
+          <div className="mb-4 flex flex-col items-center">
+            <img src={"./assets/logo.png"} w-50 h-50 />
+          </div>         
+          <form action="#" className=" flex flex-col item-center ">        
+            <h2 className="text-4xl font-bold text-center text-white">
+              SignIn
+            </h2>
+         
+            <div class="mb-2 text-lg flex flex-col text-teal-200 py-2">
+              <label for="uname" className="  text-white">
+                <b>Username</b>
+              </label>
+              <input
+                type="text"
+                placeholder="Enter Username"
+                name="uname"
+                className="rounded-3xl border-none  bg-teal-900 bg-opacity-70 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md"
+                required
+              />
+            </div>
 
-     
-        <form className="max-w-[400px] w-full mx-auto bg-gray-200 p-10 px-10 rounded-lg">
-          <h2 className="text-4xl font-bold text-center">SignIn</h2>
+            <div class="mb-2 text-lg flex flex-col text-teal-200 ">
+              <label for="uname" className="  text-white">
+                <b>Password</b>
+              </label>
+              <input
+                type="Password"
+                name="name"
+                placeholder="*********"
+                className="rounded-3xl border-none  bg-teal-900 bg-opacity-70 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md"
+                required
+              />
+            </div>
 
-          <div className="flex flex-col text-gray-600 py-2">
-            <label for="uname" className=" text-gray-600 ">
-              <b>Username</b>
-            </label>
-            <input
-              type="text"
-              placeholder="Enter Username"
-              name="uname"
-              className="rounded-lg bg-green-800 p-2 mt-2 focus:border-green-500 focus:bg-gray-300 focus:outline-none  "
-              required
-            />
-          </div>
-
-          <div className="flex flex-col text-gray-600 py-2">
-            <label for="psw">
-              <b>Password</b>
-            </label>
-            <input
-              type="password"
-              placeholder="Enter Password"
-              name="psw"
-              className="rounded-lg bg-green-800 p-2 mt-2 focus:bg-gray-300 focus:outline-none"
-              required
-            />
-          </div>
-
-          <div className="flex justify-between text-green-900 py-2">
-            <p className="flex">
-              <input className="mr-2" type="checkbox" /> Remember me{" "}
-            </p>
-            <p>Forget Password? </p>
-          </div>
-
-      
-          <button className="w-40 justify-center my-5 py-2 text-white bg-teal-900 " type="submit">LogIn</button>
-       
-          <div className="flex justify-center text-green-900 py-2">
-          <Link to='/Signup'>
-            <p>Create an account </p>
-            </Link>
-          </div>
-        </form>
+            <div className="flex justify-between text-white py-2">
+              <p className="flex">
+                <input className="mr-2" type="checkbox" /> Remember me{" "}
+              </p>
+              <p>Forget Password? </p>
+            </div>
+            <div className=" flex justify-center text-lg text-black">
+              <button
+                className="w-40 my-3 py-2 text-white  bg-teal-900 rounded-3xl transition-colors duration-300 hover:bg-teal-500 "
+                type="LogIn"
+              >
+                LogIn
+              </button>
+            </div>
+            <div className="flex justify-center text-white py-2 ">
+              <Link to="/Signup">
+                <p>Create an account </p>
+              </Link>
+            </div>
+          </form>
+        </div>
       </div>
-   
+    </div>
   );
 }

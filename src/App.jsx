@@ -15,13 +15,6 @@ export default function App() {
   </Router>
   </>
   )
-  // return (
-  //   <div >
-      
-  //       <Signin/>
-      
-  //   </div>
-  // );
 }
 
 
