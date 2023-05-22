@@ -9,7 +9,7 @@ export default function Signin() {
     <div className="rounded-xl bg-gray-600 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
         <div>
           <div className="mb-4 flex flex-col items-center">
-            <img src={"./assets/logo.png"} w-50 h-50 />
+            <img src={Logo}  />
           </div>         
           <form action="#" className=" flex flex-col item-center ">        
             <h2 className="text-4xl font-bold text-center text-white">
@@ -49,12 +49,14 @@ export default function Signin() {
               <p>Forget Password? </p>
             </div>
             <div className=" flex justify-center text-lg text-black">
+            <Link to="/Sidebar">
               <button
                 className="w-40 my-3 py-2 text-white  bg-teal-900 rounded-3xl transition-colors duration-300 hover:bg-teal-500 "
                 type="LogIn"
               >
                 LogIn
               </button>
+              </Link>
             </div>
             <div className="flex justify-center text-white py-2 ">
               <Link to="/Signup">
