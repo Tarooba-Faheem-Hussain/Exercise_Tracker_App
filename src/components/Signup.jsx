@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import loginImg from "../assets/login.png";
 import Logo from "../assets/logo.png";
+import CustomInput from "./CustomInput";
 
 export default function Signup() {
   return (
@@ -15,6 +16,25 @@ export default function Signup() {
             <h2 className="text-4xl font-bold text-center text-white">
               SignUp
             </h2>
+            <CustomInput
+              type="text"
+              placeholder="Enter Username"
+              name="uname"
+              heading="Username"
+            />
+             <CustomInput
+              type="text"
+              placeholder="Enter Email"
+              name="Email"
+              heading="Email"
+            />
+             <CustomInput
+              type="Password"
+              placeholder="*********"
+              name="Password"
+              heading="Password"
+            />
+{/* 
             <div class="mb-2 text-lg flex flex-col text-teal-200 py-2">
               <label for="uname" className="  text-white">
                 <b>Username</b>
@@ -27,6 +47,7 @@ export default function Signup() {
                 required
               />
             </div>
+
             <div class="mb-2 text-lg flex flex-col text-teal-200 ">
               <label for="uname" className="  text-white">
                 <b>Email</b>
@@ -39,6 +60,7 @@ export default function Signup() {
                 required
               />
             </div>
+
             <div class="mb-2 text-lg flex flex-col text-teal-200 ">
               <label for="uname" className="  text-white">
                 <b>Password</b>
@@ -50,7 +72,7 @@ export default function Signup() {
                 className="rounded-3xl border-none  bg-teal-900 bg-opacity-70 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md"
                 required
               />
-            </div>
+            </div> */}
 
             <div class="mt-8 flex justify-center text-lg text-black">
               <button

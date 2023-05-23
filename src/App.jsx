@@ -4,6 +4,7 @@ import { BrowserRouter as Router,Routes, Route } from 'react-router-dom'
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 import React from 'react'
+import Card from './components/Cards';
 import ReactDOM from 'react-dom/client'
 // import App from './App.jsx'
 import Sidebar from './components/Sidebar.jsx'
@@ -22,6 +23,7 @@ export default function App() {
       <Route path="/Signup" element={<Signup />} />
       <Route path="/Sidebar" element={<Sidebar />} />
       <Route path="/Modal" element={<Modal />} />
+      <Route path="/Card" element={<Card />} />
     </Routes>
   </Router>
   </>

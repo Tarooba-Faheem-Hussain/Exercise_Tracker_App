@@ -1,17 +1,18 @@
 import { Modal } from "flowbite";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Card from "./Cards";
+import Modals from "./Modal";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
-  
+
   const Menus = [
     { title: "Home", src: "Chart_fill" },
     { title: "Profile", src: "User" },
     { title: "About", src: "Chart_Fill" },
   ];
 
-  
   return (
     <div className="flex">
       <div
@@ -64,22 +65,23 @@ const Sidebar = () => {
         <h1 className="text-3xl font-bold bg-green-400 text-white px-2 py-2">
           Dashboard
         </h1>
-        <div>
-        <Link to="/Modal">
-          <button
-            className="grid-rows-3	border-teal-900
-           border-2 w-40 m-4 py-2 text-white  bg-teal-900 rounded-3xl transition-colors duration-300 hover:bg-teal-500"
-          >
-            Add Activity
-          </button>
-           </Link>
-        </div>        
-      </div>
-      
-     
 
+        <div>
+          <Link to="/Modal">
+            <button
+              className="grid-rows-3	border-teal-900
+           border-2 w-40 m-4 py-2 text-white  bg-teal-900 rounded-3xl transition-colors duration-300 hover:bg-teal-500"
+            >
+              Add Activity
+            </button>
+          </Link>
+
+          <Card />
+          
+          <Modals />
+        </div>
+      </div>
     </div>
-   
   );
 };
 export default Sidebar;
