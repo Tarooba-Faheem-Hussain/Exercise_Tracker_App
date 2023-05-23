@@ -1,17 +1,24 @@
 import React from "react";
 import CustomInputActivity from "./CustomInputActivity";
-
 import { Link } from "react-router-dom";
 
-export default function Modal() {
+export default function Modal({callb}) {
+  //props.ca
+  //callb(false);
   return (
-    <section class="bg-green-400 dark:bg-gray-900 w-1/2 sm:w-auto md:w-full lg:w-32 xl:w-3/4 ... ">
-      <div class="py-2 px-4 mx-auto max-w-2xl lg:py-16">
-        <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+    <section className="
+    justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none bg-opacity-50	bg-black">   
+    <div className="bg-green-400 bg-opacity-15 rounded-lg ">
+
+      <div className="py-2 px-4 mx-auto max-w-2xl lg:py-16">
+
+
+        <h2 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
           Create Activity
         </h2>
+       
         <form action="#">
-          <div class="grid gap-2 sm:grid-cols-2 sm:gap-4">
+          <div class="grid gap-2 sm:grid-cols-2 sm:gap-2">
             <CustomInputActivity
               type="text"
               placeholder="Name"
@@ -96,6 +103,9 @@ export default function Modal() {
             />
           
           </div>
+   
+         
+
           <button
             type="add"
             className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm	border-teal-900
@@ -103,7 +113,19 @@ export default function Modal() {
           >
             Add Activity
           </button>
+
+        
+          <button onClick={()=>callb(false)}
+            type="add"
+            className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm	border-teal-900
+           border-2 w-40 m-4 text-white  bg-teal-900 rounded-3xl font-medium "
+          >
+           Cancel
+          </button>
+          
+          {/* <button onClick={()=>callb(false)}>Close</button> */}
         </form>
+        </div>
       </div>
     </section>
 

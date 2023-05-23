@@ -1,17 +1,19 @@
-import { Modal } from "flowbite";
+//import { Modal } from "flowbite";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Card from "./Cards";
-import Modals from "./Modal";
+import Modal from "./Modal";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   const Menus = [
     { title: "Home", src: "Chart_fill" },
     { title: "Profile", src: "User" },
     { title: "About", src: "Chart_Fill" },
   ];
+  
 
   return (
     <div className="flex">
@@ -33,14 +35,7 @@ const Sidebar = () => {
               open && "rotate-[360deg]"
             }`}
           />
-          {/* <h1
-            className={`text-teal-900 font-bold text-xl duration-200 
-             ${
-              !open && "scale-0"
-            }`}
-          >
-            Excercise Tracker
-          </h1> */}
+       
         </div>
         <ul className="pt-6">
           {Menus.map((Menu, index) => (
@@ -67,18 +62,34 @@ const Sidebar = () => {
         </h1>
 
         <div>
-          <Link to="/Modal">
+        <button
+              data-modal-target="defaultModal"
+              data-modal-toggle="defaultModal"
+              class="grid-rows-3	border-teal-900
+              border-2 w-40 m-4 py-2 text-white  bg-teal-900 rounded-3xl transition-colors duration-300 hover:bg-teal-500"
+            
+              type="button" onClick={() => {setShowModal(true)}}
+            >
+              Add Activity
+            </button>
+            {showModal ? (<>
+            <Modal callb={setShowModal}/>
+            
+            </>):null}
+            
+          {/* <Link to="/Modal">          
             <button
               className="grid-rows-3	border-teal-900
            border-2 w-40 m-4 py-2 text-white  bg-teal-900 rounded-3xl transition-colors duration-300 hover:bg-teal-500"
             >
               Add Activity
             </button>
-          </Link>
+          </Link> */}
 
           <Card />
+
+          {/* <Modals /> */}
           
-          <Modals />
         </div>
       </div>
     </div>

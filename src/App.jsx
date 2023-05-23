@@ -9,7 +9,8 @@ import ReactDOM from 'react-dom/client'
 // import App from './App.jsx'
 import Sidebar from './components/Sidebar.jsx'
 import './index.css'
-import Modal from './components/modal';
+import Modal from './components/Modal';
+import Cards from './components/Cards';
 
 
 export default function App() {
@@ -23,7 +24,8 @@ export default function App() {
       <Route path="/Signup" element={<Signup />} />
       <Route path="/Sidebar" element={<Sidebar />} />
       <Route path="/Modal" element={<Modal />} />
-      <Route path="/Card" element={<Card />} />
+      <Route path="/Cards" element={<Cards />} />
+     
     </Routes>
   </Router>
   </>
