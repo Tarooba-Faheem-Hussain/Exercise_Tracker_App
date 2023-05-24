@@ -13,7 +13,6 @@ const Sidebar = () => {
     { title: "Profile", src: "User" },
     { title: "About", src: "Chart_Fill" },
   ];
-  
 
   return (
     <div className="flex">
@@ -35,7 +34,6 @@ const Sidebar = () => {
               open && "rotate-[360deg]"
             }`}
           />
-       
         </div>
         <ul className="pt-6">
           {Menus.map((Menu, index) => (
@@ -62,21 +60,24 @@ const Sidebar = () => {
         </h1>
 
         <div>
-        <button
-              data-modal-target="defaultModal"
-              data-modal-toggle="defaultModal"
-              class="grid-rows-3	border-teal-900
+          <button
+            data-modal-target="defaultModal"
+            data-modal-toggle="defaultModal"
+            class="grid-rows-3	border-teal-900
               border-2 w-40 m-4 py-2 text-white  bg-teal-900 rounded-3xl transition-colors duration-300 hover:bg-teal-500"
-            
-              type="button" onClick={() => {setShowModal(true)}}
-            >
-              Add Activity
-            </button>
-            {showModal ? (<>
-            <Modal callb={setShowModal}/>
-            
-            </>):null}
-            
+            type="button"
+            onClick={() => {
+              setShowModal(true);
+            }}
+          >
+            Add Activity
+          </button>
+          {showModal ? (
+            <>
+              <Modal callb={setShowModal} />
+            </>
+          ) : null}
+
           {/* <Link to="/Modal">          
             <button
               className="grid-rows-3	border-teal-900
@@ -85,11 +86,10 @@ const Sidebar = () => {
               Add Activity
             </button>
           </Link> */}
-
-          <Card />
-
           {/* <Modals /> */}
-          
+          <Card />
+         
+
         </div>
       </div>
     </div>
