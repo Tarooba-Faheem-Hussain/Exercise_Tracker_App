@@ -12,7 +12,6 @@ import './index.css'
 import Modal from './components/Modal';
 import Cards from './components/Cards';
 
-
 export default function App() {
   return (
     <>

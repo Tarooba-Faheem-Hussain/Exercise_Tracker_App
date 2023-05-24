@@ -21,8 +21,7 @@ export default function Signin() {
               placeholder="Enter Username"
               name="uname"
               heading="Username"
-            />
-          
+            />          
              <CustomInput
               type="Password"
               placeholder="*********"

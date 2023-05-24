@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./Modal";
 
 export const CustomCards = ({
   id,
@@ -9,9 +10,11 @@ export const CustomCards = ({
   date,
   onDelete,
 }) => {
+  const [showModal, setShowModal] = useState(false);
   const handleDelete = () => {
-    onDelete(id);
-  };
+//onDelete(id);
+console.log(id)
+  }
 
   return (
     <div class="max-w-sm rounded overflow-hidden shadow-lg bg-slate-300 m-6 grid ">
@@ -26,15 +29,27 @@ export const CustomCards = ({
 
       <div class="px-4  flex justify-center pt-6 pb-2">
         
-        <button
-          type="add"
-          className="bg-teal-900 text-white px-4 py-2 rounded-md m-2"
-        >
+      <button
+            data-modal-target="defaultModal"
+            data-modal-toggle="defaultModal"
+            class="bg-teal-900 text-white px-4 py-2 rounded-md m-2"
+            type="button"
+            onClick={() => {
+              setShowModal(true);
+            }}
+          >
           EDIT
         </button>
+        {showModal ? (
+            <>
+              <Modal callb={setShowModal} />
+            </>
+          ) : null}
+
+
         <button
           className="bg-teal-900 text-white px-4 py-2 rounded-md m-2"
-          onClick={handleDelete}
+          onClick={() => handleRemove(item.id)}
         >
           Delete
         </button>
