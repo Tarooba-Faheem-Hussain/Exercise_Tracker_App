@@ -11,6 +11,7 @@ import './index.css'
 import Modal from './components/Modal';
 import Cards from './components/Cards';
 import Home from './components/Home';
+import ProtectedRoutes from './components/ProtectedRoutes';
 
 export default function App() {
   return (
@@ -23,8 +24,8 @@ export default function App() {
       <Route path="/Modal" element={<Modal />} />
       <Route path="/Cards" element={<Cards />} />
       <Route path="/Home" element={<Home />} /> 
-      <Route path ="Sidebar/*" element={< PtrotectedRoute  Component ={Sidebar}/>}/>
-      <Route path ="Sidebar/*" element={<Dashboard/>}/>
+      <Route path ="Sidebar/*" element={< ProtectedRoutes  Component ={Sidebar}/>}/>
+      <Route path ="Sidebar/*" element={<Sidebar/>}/>
     </Routes>
   </Router>
   </>
